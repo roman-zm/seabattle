@@ -18,6 +18,7 @@ public:
         Horizontal,
         Vertical
     };
+
     bool woundedAt(int deck);
 
     Orientation getShipOrientation() const;

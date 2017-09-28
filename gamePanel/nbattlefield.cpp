@@ -1,7 +1,8 @@
 #include "nbattlefield.h"
 #include "ui_nbattlefield.h"
+#include "nbutton.h"
 
-#include <QToolButton>
+#include <QPushButton>
 
 NBattleField::NBattleField(
         int fieldSize, int fourDeck, int threeDeck,
@@ -17,6 +18,7 @@ NBattleField::NBattleField(
     ui->setupUi(this);
     gridLayout = new QGridLayout(this);
     setLayout(gridLayout);
+    gridLayout->setSpacing(0);
     initField();
 }
 
@@ -28,14 +30,10 @@ NBattleField::~NBattleField()
 void NBattleField::initField()
 {
     for(int i=0; i<fieldSize; i++) {
-        QPixmap px(20,20);
-        //px.fill(QColor(80,80,80));
-        px.fill(Qt::red);
-        QVector<QToolButton*> buff;
+        QVector<NButton*> buff;
         for(int j=0; j<fieldSize; j++) {
-            buff.push_back(new QToolButton(this));
+            buff.push_back(new NButton(i, j, this));
             gridLayout->addWidget(buff[j], i, j, Qt::AlignCenter | Qt::AlignHCenter);
-            buff.last()->setIcon(QIcon(px));
         }
         buttons.push_back(buff);
     }

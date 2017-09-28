@@ -4,9 +4,10 @@
 #include <QWidget>
 #include <QGridLayout>
 #include <QVector>
-#include <QToolButton>
+#include <QPushButton>
 
 #include "nship.h"
+#include "nbutton.h"
 
 namespace Ui {
 class NBattleField;
@@ -27,7 +28,7 @@ private:
 
     Ui::NBattleField *ui;
     QGridLayout *gridLayout;
-    QVector< QVector<QToolButton*> > buttons;
+    QVector< QVector<NButton*> > buttons;
     int fieldSize;
     int fourDeck, threeDeck, twoDeck, oneDeck;
 

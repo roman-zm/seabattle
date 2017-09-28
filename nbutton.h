@@ -1,9 +1,9 @@
 #ifndef NBUTTON_H
 #define NBUTTON_H
 
-#include <QToolButton>
+#include <QPushButton>
 
-class NButton : public QToolButton
+class NButton : public QPushButton
 {
     Q_OBJECT
 public:
