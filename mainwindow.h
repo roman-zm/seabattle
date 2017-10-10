@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "gamePanel/nbattlefield.h"
 #include "scorepanel.h"
+#include "gamePanel/playerfield.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,7 +20,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    NBattleField *field;
+//    NBattleField *field;
+    playerField *field;
     ScorePanel *panel;
     NBattleField *enemyField;
 };

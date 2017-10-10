@@ -29,16 +29,21 @@ SOURCES += \
     scorepanel.cpp \
     nship.cpp \
     nbutton.cpp \
-    gamePanel/nbattlefield.cpp
+    gamePanel/nbattlefield.cpp \
+    gamePanel/playerfield.cpp \
+    gamePanel/playerpanel.cpp
 
 HEADERS += \
         mainwindow.h \
     scorepanel.h \
     nship.h \
     nbutton.h \
-    gamePanel/nbattlefield.h
+    gamePanel/nbattlefield.h \
+    gamePanel/playerfield.h \
+    gamePanel/playerpanel.h
 
 FORMS += \
         mainwindow.ui \
     scorepanel.ui \
-    gamePanel/nbattlefield.ui
+    gamePanel/nbattlefield.ui \
+    gamePanel/playerpanel.ui

@@ -1,4 +1,6 @@
 #include "nbutton.h"
+
+#include <QMouseEvent>
 #include <QPushButton>
 
 NButton::NButton(int x, int y, QWidget *parent) : QPushButton(parent),
@@ -22,4 +24,14 @@ int NButton::getY() const
 int NButton::getX() const
 {
     return x;
+}
+
+void NButton::changeColor(QColor color)
+{
+    this->setStyleSheet(QString("background-color: %1; border: 1px solid black;").arg(color.name()));
+}
+
+void NButton::mousePressEvent(QMouseEvent *event)
+{
+    event->ignore();
 }

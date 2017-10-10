@@ -23,16 +23,18 @@ public:
 
     ~NBattleField();
 
+protected:
+    QGridLayout *gridLayout;
+    QVector< QVector<NButton*> > buttons;
+
 private:
     void initField();
 
     Ui::NBattleField *ui;
-    QGridLayout *gridLayout;
-    QVector< QVector<NButton*> > buttons;
     int fieldSize;
     int fourDeck, threeDeck, twoDeck, oneDeck;
 
-    QVector<int> ships;
+    //QVector<int> ships;
 
 };
 

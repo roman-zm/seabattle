@@ -1,7 +1,9 @@
 #include <QObject>
 #include "nship.h"
 
-NShip::NShip(QObject *parent) : QObject(parent)
+NShip::NShip(int size, QObject *parent, Orientation orientation) : QObject(parent),
+    size(size),
+    shipOrientation(orientation)
 {
 
 }
@@ -39,4 +41,10 @@ NShip::Location NShip::getLocation() const
 void NShip::setLocation(const Location &value)
 {
     location = value;
+}
+
+void NShip::setLocation(int x, int y)
+{
+    location.x = x;
+    location.y = y;
 }

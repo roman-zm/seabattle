@@ -7,16 +7,16 @@ class NShip : public QObject
 {
     Q_OBJECT
 public:
-    NShip(QObject *parent);
+    enum Orientation {
+        Horizontal,
+        Vertical
+    };
+
+    NShip(int size, QObject *parent, Orientation orientation = Orientation::Horizontal);
 
     struct Location{
         int x;
         int y;
-    };
-
-    enum Orientation {
-        Horizontal,
-        Vertical
     };
 
     bool woundedAt(int deck);
@@ -31,6 +31,7 @@ public:
 
     Location getLocation() const;
     void setLocation(const Location &value);
+    void setLocation(int x, int y);
 
 private:
     Location location;
