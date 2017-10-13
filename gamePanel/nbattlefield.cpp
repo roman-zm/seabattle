@@ -19,6 +19,7 @@ NBattleField::NBattleField(
     gridLayout = new QGridLayout(this);
     setLayout(gridLayout);
     gridLayout->setSpacing(0);
+    gridLayout->setMargin(0);
     initField();
 }
 
@@ -30,11 +31,12 @@ NBattleField::~NBattleField()
 void NBattleField::initField()
 {
     for(int i=0; i<fieldSize; i++) {
-        QVector<NButton*> buff;
+        QVector<NFieldButton*> buff;
         for(int j=0; j<fieldSize; j++) {
-            buff.push_back(new NButton(i, j, this));
+            buff.push_back(new NFieldButton(i, j, this));
             gridLayout->addWidget(buff[j], i, j, Qt::AlignCenter | Qt::AlignHCenter);
         }
         buttons.push_back(buff);
     }
+    this->setFixedSize(buttons[0][0]->height()*fieldSize, buttons[0][0]->height()*fieldSize);
 }

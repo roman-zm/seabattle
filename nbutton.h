@@ -7,20 +7,22 @@ class NButton : public QPushButton
 {
     Q_OBJECT
 public:
-    NButton(int x, int y, QWidget *parent = Q_NULLPTR);
+    NButton(QWidget *parent = Q_NULLPTR);
 
-    enum state {
-        mi
-    };
-
-    int getY() const;
-
-    int getX() const;
+   // enum state {
+   //     mi
+   // };
 
     void changeColor(QColor color);
+
+   // int getY() const;
+
+   // int getX() const;
+
+   // void changeColor(QColor color);
 private:
-    int x;
-    int y;
+    //int x;
+    //int y;
 
     void mousePressEvent(QMouseEvent *event);
 };

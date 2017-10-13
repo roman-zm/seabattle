@@ -11,7 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    field = new playerField(10, 1, 2, 3, 4, this);
+    //field = new playerField(10, 1, 2, 3, 4, this);
+    field = new playerPanel(this);
     panel = new ScorePanel(this);
     enemyField = new NBattleField(10, 1, 2, 3, 4, this);
 
@@ -19,10 +20,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->horizontalLayout->addWidget(panel);
     ui->horizontalLayout->addWidget(enemyField);
 
-    NShip *ship = new NShip(4, this);
-    field->addShip(ship, 2, 4);
-    NShip *ship2 = new NShip(3, this, NShip::Orientation::Vertical);
-    field->addShip(ship2, 6, 6);
+    //NShip *ship = new NShip(4, this);
+    //field->addShip(ship, 2, 4);
+    //NShip *ship2 = new NShip(3, this, NShip::Orientation::Vertical);
+    //field->addShip(ship2, 6, 6);
 }
 
 MainWindow::~MainWindow()

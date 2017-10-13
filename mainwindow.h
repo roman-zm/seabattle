@@ -5,6 +5,7 @@
 #include "gamePanel/nbattlefield.h"
 #include "scorepanel.h"
 #include "gamePanel/playerfield.h"
+#include "gamePanel/playerpanel.h"
 
 namespace Ui {
 class MainWindow;
@@ -21,7 +22,8 @@ public:
 private:
     Ui::MainWindow *ui;
 //    NBattleField *field;
-    playerField *field;
+    //playerField *field;
+    playerPanel *field;
     ScorePanel *panel;
     NBattleField *enemyField;
 };

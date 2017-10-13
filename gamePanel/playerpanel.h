@@ -2,6 +2,9 @@
 #define PLAYERPANEL_H
 
 #include <QWidget>
+#include <QMouseEvent>
+
+#include "playerfield.h"
 
 namespace Ui {
 class playerPanel;
@@ -17,6 +20,7 @@ public:
 
 private:
     Ui::playerPanel *ui;
+    playerField *field;
 };
 
 #endif // PLAYERPANEL_H

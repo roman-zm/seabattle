@@ -31,7 +31,9 @@ SOURCES += \
     nbutton.cpp \
     gamePanel/nbattlefield.cpp \
     gamePanel/playerfield.cpp \
-    gamePanel/playerpanel.cpp
+    gamePanel/playerpanel.cpp \
+    nfieldbutton.cpp \
+    gamePanel/nshipbutton.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,7 +42,9 @@ HEADERS += \
     nbutton.h \
     gamePanel/nbattlefield.h \
     gamePanel/playerfield.h \
-    gamePanel/playerpanel.h
+    gamePanel/playerpanel.h \
+    nfieldbutton.h \
+    gamePanel/nshipbutton.h
 
 FORMS += \
         mainwindow.ui \

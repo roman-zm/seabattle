@@ -1,5 +1,5 @@
-#ifndef PLAYERPANEL_H
-#define PLAYERPANEL_H
+#ifndef PLAYERFIELD_H
+#define PLAYERFIELD_H
 
 #include "nbattlefield.h"
 #include "nship.h"
@@ -18,11 +18,14 @@ public:
                           int oneDeck, QWidget *parent = 0);
     void addShip(NShip *ship, int x, int y);
 
-    void mousePressEvent(QMouseEvent *event);
     //void mouseMoveEvent(QMouseEvent *event);
+protected:
+    void mousePressEvent(QMouseEvent *event);
+    void dragEnterEvent(QDragEnterEvent *event);
+    void dropEvent(QDropEvent *event);
 
 private:
     QVector<NShip*> shipsVector;
 };
 
-#endif // PLAYERPANEL_H
+#endif // PLAYERFIELD_H

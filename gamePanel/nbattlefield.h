@@ -7,7 +7,8 @@
 #include <QPushButton>
 
 #include "nship.h"
-#include "nbutton.h"
+//#include "nbutton.h"
+#include "nfieldbutton.h"
 
 namespace Ui {
 class NBattleField;
@@ -25,14 +26,13 @@ public:
 
 protected:
     QGridLayout *gridLayout;
-    QVector< QVector<NButton*> > buttons;
+    QVector< QVector<NFieldButton*> > buttons;
+    int fieldSize;
+    int fourDeck, threeDeck, twoDeck, oneDeck;
+    Ui::NBattleField *ui;
 
 private:
     void initField();
-
-    Ui::NBattleField *ui;
-    int fieldSize;
-    int fourDeck, threeDeck, twoDeck, oneDeck;
 
     //QVector<int> ships;
 
